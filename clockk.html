@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGULAR WATCH</title>
+    <!--link to css external sheet  -->
+    <link rel="stylesheet" href="../CSS/1 ANGULAR WATCH.css">
+    <!-- /****GOOGLE FONTS****** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster+Two&family=Oswald:wght@300&family=Poppins:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <!-- *******ION ICONS********* -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- *******MATERIAL ICONS**** -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- ******* -->
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: black; */
+    
+}
+.angularclock{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(239, 236, 236, 0.15),  -6px -6px 10px -1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    background: linear-gradient(45deg, rgb(4, 4, 4), rgb(10, 0, 0) );
+    border: 10px solid rgb(212, 25, 25);
+}
+.dot{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background:  rgba(248, 244, 244, 0.2);
+    border:2px solid rgb(232, 69, 69);
+    border-radius: 50%;
+    left:calc(50% - 2px);
+    z-index: 10;
+}
+.num span{
+    width: 16px;
+    height: 32px;
+    line-height: 32px;
+    color: snow;
+    text-align: center;
+    vertical-align: middle;
+}
+  /* display in line for span to arrange the numbers in right order by avoding of numbers in rotate form */
+
+  span{
+   display: inline-block;
+  }
+
+.num{
+    position: absolute;
+    height: 250px;
+    padding: 0.5rem;
+}
+
+.num1{
+    transform: rotate(30deg);
+}
+.num1 span{
+    transform: rotate(-30deg);
+}
+
+.num2{
+    transform: rotate(60deg);
+}
+.num2 span{
+    transform: rotate(-60deg);
+}
+.num3{
+    transform: rotate(90deg);
+}
+.num3 span{
+    transform: rotate(-90deg);
+}
+.num4{
+    transform: rotate(120deg);
+}
+.num4 span{
+    transform: rotate(-120deg);
+}
+.num5{
+    transform: rotate(150deg);
+}
+.num5 span{
+    transform: rotate(-150deg);
+}
+.num6{
+    transform: rotate(180deg);
+}
+.num6 span{
+    transform: rotate(-180deg);
+}
+.num7{
+    transform: rotate(210deg);
+}
+.num7 span{
+    transform: rotate(-210deg);
+}
+.num8{
+    transform: rotate(240deg);
+}
+.num8 span{
+    transform: rotate(-240deg);
+}
+.num9{
+    transform: rotate(270deg);
+}
+.num9 span{
+    transform: rotate(-270deg);
+}
+.num10{
+    transform: rotate(300deg);
+}
+.num10 span{
+    transform: rotate(-300deg);
+}
+.num11{
+    transform: rotate(330deg);
+}
+.num11 span{
+    transform: rotate(-330deg);
+}
+.num12{
+    transform: rotate(360deg);
+}
+.num12 span{
+    transform: rotate(-360deg);
+}
+/* ** */
+
+.sec-hands{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border-radius: 100% 100% 0 0;
+    width: 2px;
+    height: 50%;
+    background-color: aquamarine;
+    transform-origin: 50% 80%;
+}
+.min-hands{
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    border-radius: 100% 100% 0 0;
+    width: 3px;
+    height: 40%;
+    background-color: chocolate;
+    transform-origin: 50% 80%;
+
+    
+}
+.hour-hands{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    border-radius: 100% 100% 0 0;
+    width: 5px;
+    height: 25%;
+    background-color: rgb(5, 249, 143);
+    transform-origin: 50% 80%;
+
+   
+}
+</style>
+<body>
+   <div class="angularclock">
+            <div class="dot"></div>
+            <div class=" num num1"><span>1</span></div>
+            <div class=" num num2"><span>2</span></div>
+            <div class=" num num3"><span>3</span></div>
+            <div class=" num num4"><span>4</span></div>
+            <div class=" num num5"><span>5</span></div>
+            <div class=" num num6"><span>6</span></div>
+            <div class=" num num7"><span>7</span></div>
+            <div class=" num num8"><span>8</span></div>
+            <div class=" num num9"><span>9</span></div>
+            <div class=" num num10"><span>10</span></div>
+            <div class=" num num11"><span>11</span></div>
+            <div class=" num num12"><span>12</span></div>
+            <!-- HANDS -->
+            
+            <div class="hour-hands" id="hourhand"></div>
+            <div class="min-hands" id="minhand"></div>
+            <div class="sec-hands" id="sechand"></div>
+        
+            
+           
+        </div>
+
+
+    
+</body>
+
+<script>
+    var hourhand = document.getElementById("hourhand");
+var minhand = document.getElementById("minhand");
+var sechand = document.getElementById("sechand");
+
+var angularclock = setInterval(()=>
+{
+    var time=new Date();
+    hourhand.style.transform=`rotate(${time.getHours()*30+time.getMinutes()/2}deg)`;
+    minhand.style.transform=`rotate(${time.getMinutes()*6}deg)`;
+    sechand.style.transform=`rotate(${time.getSeconds()*6}deg)`;
+
+
+},1000)
+</script>
+</html>
